@@ -1,0 +1,22 @@
+#reviews.album{
+    background-color: #fcdc97;
+    margin-top: 62px;
+}
+.card-body .card-text {
+    text-align: center;
+}
+.card-body .card-text a{
+    color: #1c6861;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.addmore{
+    border-radius: 50px;
+}
+.main_box img{
+    margin:50px 10px;
+    width: 50%;
+    border: 20px solid whitesmoke;
+    border-radius: 10px;
+}
