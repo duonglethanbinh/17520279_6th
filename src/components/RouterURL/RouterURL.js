@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
 import About from '../About/About';
 import Contact from '../Contact/Contact';
-import Reviews from '../Reviews/Reviews';
+import Places from '../Places/Places';
 import Welcome from '../Welcome/Welcome';
 import NotFound from '../NotFound/NotFound';
-import Detail from '../Reviews/Detail';
 import Signin from '../Signin/Signin'
 import Register from '../Register/Register';
+import Blogs from '../Blogs/Blogs';
+// import Detail from '../Blogs/Detail';
 class RouterURL extends Component {
     render() {
         return (
@@ -21,8 +22,11 @@ class RouterURL extends Component {
                 <Route path="/contact">
                     <Contact />
                 </Route>
-                <Route path="/reviews">
-                    <Reviews />
+                <Route path="/places">
+                    <Places />
+                </Route>
+                <Route path="/blogs">
+                    <Blogs />
                 </Route>
                 <Route path="/signin">
                     <Signin />
@@ -30,7 +34,6 @@ class RouterURL extends Component {
                 <Route path="/register">
                     <Register />
                 </Route>
-                <Route exact path="/detail/:id/:slug.html" component={Detail} />
                 <Route>
                     <NotFound />
                 </Route>

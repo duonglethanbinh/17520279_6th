@@ -17,16 +17,25 @@ class Header extends Component {
                     <div className="navbar-collapse collapse" id="navbarsExampleDefault" style={{}}>
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                                <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/blog">Blog</NavLink>
+                                <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/blogs"><strong>Blog</strong></NavLink>
                             </li>
                             <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                                <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/reviews">Reviews</NavLink>
+                                <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/places">Places</NavLink>
                             </li>
                             <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                                 <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/aboutme">About me</NavLink>
                             </li>
                             <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                                 <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/contact">Contact</NavLink>
+                            </li>
+                        </ul>
+                        <ul className="navbar-nav">
+                            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                                <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/signin">Sign in</NavLink>
+                            </li>
+                            <li className="nav-item"><span className="nav-link">/</span></li>
+                            <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                                <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/register">Register</NavLink>
                             </li>
                         </ul>
                     </div>

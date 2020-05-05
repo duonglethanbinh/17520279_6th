@@ -28,7 +28,7 @@ class Contact extends Component {
             submitResult: false
         });
 
-        fetch('https://travellog-assignment-5th-b-e.herokuapp.com/contact',
+        fetch('http://travellog-6th-backend.herokuapp.com/contact',
             {
                 method: "POST",
                 headers: {
@@ -36,24 +36,18 @@ class Contact extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    fullname: this.state.fullname,
+                    name: this.state.name,
                     email: this.state.email,
                     message: this.state.message,
                 })
             }).then((res) => res.json())
             .then((json) => {
                 this.setState({ submitted: true, submitResult: true });
+                alert("Success")
             })
             .catch((error) => {
                 this.setState({ submitted: true, submitResult: false });
             });
-
-        var content = '';
-        content += 'Name: ' + this.state.fullname;
-        content += ' === Email: ' + this.state.email;
-        content += ' === Content:' + this.state.message;
-
-        console.log(content);
     }
     render() {
         if (this.state.isRedirect) {
@@ -68,8 +62,8 @@ class Contact extends Component {
                     <h3>Contact me</h3>
                     <img src={Form} alt="Form" />
                     <form id="contact-form" onSubmit={(event) => this.submitForm(event)}>
-                        <label htmlFor="fullname">Full Name</label>
-                        <input onChange={(event) => this.isInputChange(event)} type="text" id="fullname" name="fullname" placeholder="Your full name.." />
+                        <label htmlFor="name">Full Name</label>
+                        <input onChange={(event) => this.isInputChange(event)} type="text" id="name" name="name" placeholder="Your full name.." />
                         <label htmlFor="email">Email</label>
                         <input onChange={(event) => this.isInputChange(event)} type="email" id="email" name="email" placeholder="Your email.." />
                         <label htmlFor="message">Your Message</label>

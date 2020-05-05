@@ -3,9 +3,8 @@ body{
 }
 .main_box {
     text-align: center;
-    margin: 30px 0;
-    padding: 30px 0;
-    /* background-color: #fcdc97; */
+    /* margin: 30px 0; */
+    /* padding: 30px 0; */
 }
 
 .main_box h2 {
@@ -13,6 +12,11 @@ body{
     margin: 20px;
 }
 
+.main_box h4 {
+    font-size: 18px;
+    margin: 20px 0;
+    color: blue;
+}
 .main_box .paras {
     font-size: 20px;
     margin: 40px;

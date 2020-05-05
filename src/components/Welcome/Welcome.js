@@ -14,10 +14,10 @@ class Welcome extends Component {
                 </div>
                 <div className="card card_login text-center">
                     <div className="card-body">
-                        <h5 className="card-title">We are trying to build our community. Join with us on <Link style={{textDecoration:'none', color:'black'}} to="/blog"><strong>Blog</strong></Link></h5>
-                        <p className="card-text">If you haven't own any account yet. Click the botton below</p>
-                        <Link to="/signin" class="btn btn-primary btn-lg btn_edit">Sign in</Link>
-                        <Link to="/register" class="btn btn-secondary btn-lg btn_edit">Register</Link>
+                        <h5 className="card-title">We are trying to build our community. Join with us on <Link style={{ textDecoration: 'none', color: 'black' }} to="/blog"><strong>Blog</strong></Link></h5>
+                        {/* <p className="card-text">If you haven't own any account yet. Click the botton below</p>
+                        <Link to="/signin" className="btn btn-primary btn-lg btn_edit">Sign in</Link>
+                        <Link to="/register" className="btn btn-secondary btn-lg btn_edit">Register</Link> */}
                     </div>
                 </div>
             </div>
