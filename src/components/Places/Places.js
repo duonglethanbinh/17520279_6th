@@ -10,7 +10,7 @@ class Places extends Component {
         };
     }
     componentDidMount() {
-        axios.get('http://travellog-6th-backend.herokuapp.com/reviews')
+        axios.get('https://travellog-6th-backend.herokuapp.com/reviews')
             .then(res => {
                 const placeslist = res.data;
                 this.setState({ placeslist });

@@ -28,7 +28,7 @@ class Contact extends Component {
             submitResult: false
         });
 
-        fetch('http://travellog-6th-backend.herokuapp.com/contact',
+        fetch('https://travellog-6th-backend.herokuapp.com/contact',
             {
                 method: "POST",
                 headers: {
