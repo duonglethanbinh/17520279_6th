@@ -11,7 +11,7 @@ class Blogs extends Component {
         };
     }
     componentDidMount() {
-        axios.get('https://travellog-6th-backend.herokuapp.com/reviews/blogs/')
+        axios.get('https://travellog-6th-backend.herokuapp.com/blogs/')
             .then(res => {
                 const blogslist = res.data;
                 this.setState({ blogslist });
@@ -32,7 +32,7 @@ class Blogs extends Component {
             submitResult: false
         });
 
-        fetch('https://travellog-6th-backend.herokuapp.com/reviews/blogs',
+        fetch('https://travellog-6th-backend.herokuapp.com/blogs',
             {
                 method: "POST",
                 headers: {
@@ -47,8 +47,8 @@ class Blogs extends Component {
             }).then((res) => res.json())
             .then((json) => {
                 this.setState({ submitted: true, submitResult: true });
-                alert("Successed. Sroll down to the end for checking.");
-                axios.get('https://travellog-6th-backend.herokuapp.com/reviews/blogs')
+                alert("Succeeded. Sroll down to the end for checking.");
+                axios.get('https://travellog-6th-backend.herokuapp.com/blogs')
                     .then(res => {
                         const blogslist = res.data;
                         this.setState({ blogslist });
@@ -79,12 +79,12 @@ class Blogs extends Component {
                         <textarea onChange={(event) => this.isInputChange(event)} id="content" name="content" placeholder="Write something.." rows="5" required></textarea>
                         <input type="submit" value="Submit" />
                     </form>
-                    {blogslist.map((data, i) => {
-                        return (
-                            <Detail key={i} Pname={data.name} Ptitle={data.title} Pcontent={data.content} />
-                        )
-                    })}
                 </div>
+                {blogslist.map((data, i) => {
+                    return (
+                        <Detail key={i} Pname={data.name} Ptitle={data.title} Pcontent={data.content} />
+                    )
+                })}
             </div>
         )
     }

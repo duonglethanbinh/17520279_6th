@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Prompt, Redirect } from "react-router-dom";
+import { Prompt } from "react-router-dom";
 import './Contact.css';
 import Form from '../../img/icons/form.png'
 class Contact extends Component {
@@ -28,7 +28,7 @@ class Contact extends Component {
             submitResult: false
         });
 
-        fetch('https://travellog-6th-backend.herokuapp.com/contact',
+        fetch('https://travellog-6th-backend.herokuapp.com/contacts',
             {
                 method: "POST",
                 headers: {
@@ -50,11 +50,6 @@ class Contact extends Component {
             });
     }
     render() {
-        if (this.state.isRedirect) {
-            return (
-                <Redirect to='/' />
-            )
-        }
         return (
             <div>
                 {<Prompt when={this.state.isBlocking} message={location => `Are you sure you want to go to ${location.pathname}`} />}

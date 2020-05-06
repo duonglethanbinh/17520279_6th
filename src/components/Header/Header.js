@@ -29,7 +29,7 @@ class Header extends Component {
                                 <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/contact">Contact</NavLink>
                             </li>
                         </ul>
-                        <ul className="navbar-nav">
+                        {/* <ul className="navbar-nav">
                             <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                                 <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/signin">Sign in</NavLink>
                             </li>
@@ -37,7 +37,7 @@ class Header extends Component {
                             <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                                 <NavLink className="nav-link" activeClassName="selected" activeStyle={{ color: "white" }} to="/register">Register</NavLink>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </nav>
             </div>

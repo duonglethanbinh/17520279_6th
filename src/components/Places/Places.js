@@ -10,7 +10,7 @@ class Places extends Component {
         };
     }
     componentDidMount() {
-        axios.get('https://travellog-6th-backend.herokuapp.com/reviews')
+        axios.get('https://travellog-6th-backend.herokuapp.com/places')
             .then(res => {
                 const placeslist = res.data;
                 this.setState({ placeslist });
@@ -24,7 +24,7 @@ class Places extends Component {
                     <div className="row">
                         {placeslist.map((data, i) => {
                             return (
-                                <div className="col-md-4">
+                                <div key={i} className="col-md-4">
                                     <div className="card mb-4 box-shadow">
                                         <img className="card-img-top" src={data.image} alt="Card" />
                                         <div className="card-body">
