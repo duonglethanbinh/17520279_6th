@@ -17,6 +17,11 @@ body{
     margin: 20px 0;
     color: blue;
 }
+.main_box h4 i {
+    font-size: 16px;
+    margin: 20px 0;
+    color: rgb(170, 20, 20);
+}
 .main_box .paras {
     font-size: 20px;
     margin: 80px;

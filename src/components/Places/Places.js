@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Places.css'
 import { Link } from "react-router-dom";
+import { trackPromise } from 'react-promise-tracker';
 import axios from 'axios';
 class Places extends Component {
     constructor(props) {
@@ -10,11 +11,12 @@ class Places extends Component {
         };
     }
     componentDidMount() {
-        axios.get('https://travellog-6th-backend.herokuapp.com/places')
-            .then(res => {
-                const placeslist = res.data;
-                this.setState({ placeslist });
-            })
+        trackPromise(
+            axios.get('https://travellog-6th-backend.herokuapp.com/places')
+                .then(res => {
+                    const placeslist = res.data;
+                    this.setState({ placeslist });
+                }))
     }
     render() {
         const { placeslist } = this.state;
