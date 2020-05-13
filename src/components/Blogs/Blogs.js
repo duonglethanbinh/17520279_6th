@@ -52,7 +52,6 @@ class Blogs extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    place_id: this.state.name,
                     name: this.state.name,
                     title: this.state.title,
                     content: this.state.content,
